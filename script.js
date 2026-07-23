@@ -391,14 +391,40 @@ themeButton.onclick = ()=>{
 document.body.classList.toggle("dark");
 
 
+const darkModeEnabled =
+document.body.classList.contains("dark");
+
+
+// Save preference
+localStorage.setItem(
+"theme",
+darkModeEnabled ? "dark" : "light"
+);
+
+
 themeButton.innerHTML =
 document.body.classList.contains("dark")
 ?
-"☀️"
+"☀️ Light Mode"
 :
-"🌙";
+"🌚 Dark Mode";
 
 };
+
+// Load saved theme preference
+
+const savedTheme =
+localStorage.getItem("theme");
+
+
+if(savedTheme === "dark"){
+
+    document.body.classList.add("dark");
+
+    themeButton.innerHTML =
+    "☀️ Light Mode";
+
+}
 /* =========================================
    Weather + Air Quality + Humidity
    ========================================= */
