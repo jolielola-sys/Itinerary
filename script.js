@@ -400,33 +400,28 @@ document.body.classList.contains("dark")
 
 };
 /* =========================================
-   Weather Cards
-   Uses Open-Meteo (free, no API key)
+   Weather + Air Quality + Humidity
    ========================================= */
 
 
 const locations = {
 
     seoulWeather:{
-        name:"Seoul",
         latitude:37.5665,
         longitude:126.9780
     },
 
     jejuWeather:{
-        name:"Jeju",
         latitude:33.4996,
         longitude:126.5312
     },
 
     gyeongjuWeather:{
-        name:"Gyeongju",
         latitude:35.8562,
         longitude:129.2247
     },
 
     jeonjuWeather:{
-        name:"Jeonju",
         latitude:35.8242,
         longitude:127.1480
     }
@@ -435,52 +430,133 @@ const locations = {
 
 
 
-async function getWeather(){
+function airQualityLabel(pm){
 
-for(const id in locations){
-
-    const location =
-    locations[id];
-
-
-    try {
-
-
-        const response =
-        await fetch(
-`https://api.open-meteo.com/v1/forecast?latitude=${location.latitude}&longitude=${location.longitude}&current_weather=true`
-        );
-
-
-        const data =
-        await response.json();
-
-
-        const weather =
-        data.current_weather;
-
-
-        document.getElementById(id)
-        .innerHTML =
-        `
-        🌡️ ${weather.temperature}°C
-        <br>
-        💨 Wind ${weather.windspeed} km/h
-        `;
-
-
+    if(pm <= 12){
+        return "🟢 Good";
     }
 
+    else if(pm <= 35){
+        return "🟡 Moderate";
+    }
 
-    catch(error){
+    else if(pm <= 55){
+        return "🟠 Unhealthy";
+    }
 
-        document.getElementById(id)
-        .innerHTML =
-        "Weather unavailable";
-
+    else{
+        return "🔴 Poor";
     }
 
 }
+
+
+
+
+async function getWeather(){
+
+
+for(const id in locations){
+
+
+const location = locations[id];
+
+
+try {
+
+
+const weatherResponse = await fetch(
+
+`https://api.open-meteo.com/v1/forecast?
+latitude=${location.latitude}
+&longitude=${location.longitude}
+&current=
+temperature_2m,
+relative_humidity_2m`
+
+.replace(/\s/g,'')
+
+);
+
+
+
+const weatherData =
+await weatherResponse.json();
+
+
+
+const airResponse = await fetch(
+
+`https://air-quality-api.open-meteo.com/v1/air-quality?
+latitude=${location.latitude}
+&longitude=${location.longitude}
+&current=pm2_5`
+
+.replace(/\s/g,'')
+
+);
+
+
+
+const airData =
+await airResponse.json();
+
+
+
+const temperature =
+weatherData.current.temperature_2m;
+
+
+
+const humidity =
+weatherData.current.relative_humidity_2m;
+
+
+
+const pm =
+airData.current.pm2_5;
+
+
+
+document.getElementById(id).innerHTML =
+
+`
+
+🌡️ Temperature:
+<strong>${temperature}°C</strong>
+
+<br><br>
+
+🌫️ Air Quality:
+<strong>${airQualityLabel(pm)}</strong>
+
+<br>
+
+PM2.5:
+<strong>${pm} μg/m³</strong>
+
+<br><br>
+
+💧 Humidity:
+<strong>${humidity}%</strong>
+
+`;
+
+
+
+}
+
+
+catch(error){
+
+document.getElementById(id).innerHTML =
+"Weather unavailable";
+
+}
+
+
+}
+
 
 }
 
