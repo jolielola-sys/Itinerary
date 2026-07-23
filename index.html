@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Korea Adventure 2026 🇰🇷</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Website styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo">🌸 Korea 2026</div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#itinerary">Itinerary</a>
+        <a href="#places">Places</a>
+        <a href="#food">Food</a>
+        <a href="#notes">Notes</a>
+    </div>
+
+    <button id="themeToggle">🌙</button>
+</nav>
+
+
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+
+    <div class="hero-overlay">
+
+        <h1>South Korea Adventure</h1>
+
+        <p>
+            Seoul • Jeju • Gyeongju • Jeonju
+        </p>
+
+        <div class="countdown">
+            <h2>Countdown</h2>
+            <p id="countdownTimer">
+                Loading...
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Trip Summary -->
+<section class="section">
+
+<h2>Our Journey 🌸</h2>
+
+<div class="summary-grid">
+
+    <div class="card">
+        <h3>🇰🇷 Seoul</h3>
+        <p>24 September – 29 September 2026</p>
+    </div>
+
+
+    <div class="card">
+        <h3>🌊 Jeju Island</h3>
+        <p>29 September – 3 October 2026</p>
+    </div>
+
+
+    <div class="card">
+        <h3>🏯 Gyeongju</h3>
+        <p>3 October – 7 October 2026</p>
+    </div>
+
+
+    <div class="card">
+        <h3>🍂 Jeonju</h3>
+        <p>7 October – 10 October 2026</p>
+    </div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- Weather -->
+<section id="weather" class="section">
+
+<h2>Weather ☁️</h2>
+
+<div class="weather-grid">
+
+    <div class="card weather-card">
+        <h3>Seoul</h3>
+        <p id="seoulWeather">Loading...</p>
+    </div>
+
+
+    <div class="card weather-card">
+        <h3>Jeju</h3>
+        <p id="jejuWeather">Loading...</p>
+    </div>
+
+
+    <div class="card weather-card">
+        <h3>Gyeongju</h3>
+        <p id="gyeongjuWeather">Loading...</p>
+    </div>
+
+
+    <div class="card weather-card">
+        <h3>Jeonju</h3>
+        <p id="jeonjuWeather">Loading...</p>
+    </div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- Currency -->
+<section class="section">
+
+<h2>Currency Converter 💱</h2>
+
+<div class="currency-box">
+
+<input 
+type="number" 
+id="audInput"
+placeholder="AUD"
+>
+
+<p>
+≈
+</p>
+
+<div id="krwOutput">
+₩0
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- Itinerary -->
+<section id="itinerary" class="section">
+
+<h2>Daily Itinerary 📅</h2>
+
+<div id="itineraryContainer">
+
+<!-- Generated automatically by JavaScript -->
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- Places -->
+<section id="places" class="section">
+
+<h2>Places Wishlist 📍</h2>
+
+<div class="card">
+
+<p>
+Places to visit will be added here.
+</p>
+
+<p>
+Each location will include:
+</p>
+
+<ul>
+<li>Google Maps link</li>
+<li>Naver Maps link</li>
+<li>Notes</li>
+</ul>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- Food -->
+<section id="food" class="section">
+
+<h2>Food Wishlist 🍜</h2>
+
+<div class="card">
+
+<p>
+Restaurants and cafés to visit will be added here.
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- Notes -->
+<section id="notes" class="section">
+
+<h2>Shared Notes 📝</h2>
+
+<div class="notes-box">
+
+<textarea 
+id="groupNotes"
+placeholder="Add notes for the group..."
+></textarea>
+
+<button id="saveNotes">
+Save Notes
+</button>
+
+</div>
+
+</section>
+
+
+
+
+
+<footer>
+
+<p>
+Made with 🌸 for Korea 2026
+</p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
