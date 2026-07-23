@@ -379,46 +379,6 @@ Math.round(result)
 
 
 
-
-
-
-/* ---------- Shared Notes ---------- */
-
-
-const notes =
-document.getElementById("groupNotes");
-
-
-const saveButton =
-document.getElementById("saveNotes");
-
-
-
-notes.value =
-localStorage.getItem("koreaNotes") || "";
-
-
-
-saveButton.onclick = ()=>{
-
-localStorage.setItem(
-"koreaNotes",
-notes.value
-);
-
-
-alert(
-"Notes saved 🌸"
-);
-
-};
-
-
-
-
-
-
-
 /* ---------- Dark Mode ---------- */
 
 
