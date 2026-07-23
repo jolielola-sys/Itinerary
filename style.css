@@ -608,3 +608,49 @@ repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 
 }
+/* ---------- Accommodation ---------- */
+
+
+.accommodation-card {
+
+    min-height:250px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.airbnb-button {
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:12px 22px;
+
+    border-radius:25px;
+
+    background:var(--pink);
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+.airbnb-button:hover {
+
+    background:var(--sage);
+
+}
