@@ -346,33 +346,96 @@ itineraryContainer.appendChild(card);
 
 
 
-/* ---------- Currency Converter ---------- */
+
+/* ---------- Live Currency Converter KRW → AUD ---------- */
 
 
-const audInput =
-document.getElementById("audInput");
+const krwInput =
+document.getElementById("krwInput");
 
 
-audInput.addEventListener(
+let krwToAudRate = null;
+
+
+
+async function getExchangeRate(){
+
+
+try {
+
+
+const response = await fetch(
+"https://v6.exchangerate-api.com/v6/Ye9afb37b49f0ba780bb7a271/latest/KRW"
+);
+
+
+const data =
+await response.json();
+
+
+krwToAudRate =
+data.conversion_rates.AUD;
+
+
+}
+
+
+catch(error){
+
+
+console.log(
+"Unable to load exchange rate",
+error
+);
+
+
+}
+
+
+}
+
+
+
+getExchangeRate();
+
+
+
+
+
+krwInput.addEventListener(
 "input",
 ()=>{
 
 
-// Approximate placeholder rate.
-// Replace later with live exchange API.
+if(!krwToAudRate){
 
-const rate = 950;
-
-
-const result =
-audInput.value * rate;
-
-
-document.getElementById("krwOutput")
+document.getElementById("audOutput")
 .innerHTML =
-"₩" +
-Math.round(result)
-.toLocaleString();
+"Loading rate...";
+
+return;
+
+}
+
+
+
+const krwAmount =
+Number(krwInput.value);
+
+
+
+const audAmount =
+krwAmount * krwToAudRate;
+
+
+
+document.getElementById("audOutput")
+.innerHTML =
+
+"$" +
+audAmount.toFixed(2)
++
+" AUD";
 
 
 });
