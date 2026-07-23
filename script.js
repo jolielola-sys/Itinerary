@@ -303,14 +303,22 @@ ${day.activities
 </ul>
 
 
-<button>
+<a 
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/${encodeURIComponent(day.city)}"
+>
 📍 Google Maps
-</button>
+</a>
 
 
-<button>
+<a 
+class="map-button"
+target="_blank"
+href="https://map.naver.com/v5/search/${encodeURIComponent(day.city)}"
+>
 📍 Naver Maps
-</button>
+</a>
 
 
 </div>
