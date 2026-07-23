@@ -431,3 +431,90 @@ document.body.classList.contains("dark")
 "🌙";
 
 };
+/* =========================================
+   Weather Cards
+   Uses Open-Meteo (free, no API key)
+   ========================================= */
+
+
+const locations = {
+
+    seoulWeather:{
+        name:"Seoul",
+        latitude:37.5665,
+        longitude:126.9780
+    },
+
+    jejuWeather:{
+        name:"Jeju",
+        latitude:33.4996,
+        longitude:126.5312
+    },
+
+    gyeongjuWeather:{
+        name:"Gyeongju",
+        latitude:35.8562,
+        longitude:129.2247
+    },
+
+    jeonjuWeather:{
+        name:"Jeonju",
+        latitude:35.8242,
+        longitude:127.1480
+    }
+
+};
+
+
+
+async function getWeather(){
+
+for(const id in locations){
+
+    const location =
+    locations[id];
+
+
+    try {
+
+
+        const response =
+        await fetch(
+`https://api.open-meteo.com/v1/forecast?latitude=${location.latitude}&longitude=${location.longitude}&current_weather=true`
+        );
+
+
+        const data =
+        await response.json();
+
+
+        const weather =
+        data.current_weather;
+
+
+        document.getElementById(id)
+        .innerHTML =
+        `
+        🌡️ ${weather.temperature}°C
+        <br>
+        💨 Wind ${weather.windspeed} km/h
+        `;
+
+
+    }
+
+
+    catch(error){
+
+        document.getElementById(id)
+        .innerHTML =
+        "Weather unavailable";
+
+    }
+
+}
+
+}
+
+
+getWeather();
