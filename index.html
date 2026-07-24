@@ -244,33 +244,40 @@ View Airbnb →
 
 
 
+    
 <!-- Currency -->
-    
-<p class="exchange-rate">
-    Approximate rate: ₩1,000 ≈ $1.10 AUD
-</p>    
-    
-<section class="section">
 
-<h2>Currency Converter </h2>
+<section class="section" id="currency">
 
-<div class="currency-box">
+    <h2>Currency Converter</h2>
 
-<input 
-type="number" 
-id="krwInput"
-placeholder="KRW"
->
+ <div class="exchange-rate-card">
 
-<p>
-≈
-</p>
+    <span class="rate-label">
+        Approximate Exchange Rate
+    </span>
 
-<div id="audOutput">
-$0 AUD
-</div>
+    <span class="rate-value">
+        ₩1,000 ≈ $1.10 AUD
+    </span>
 
 </div>
+
+    <div class="currency-box">
+
+        <input
+            type="number"
+            id="krwInput"
+            placeholder="KRW"
+        >
+
+        <p>≈</p>
+
+        <div id="audOutput">
+            $0 AUD
+        </div>
+
+    </div>
 
 </section>
 
