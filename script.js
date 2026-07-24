@@ -347,96 +347,22 @@ itineraryContainer.appendChild(card);
 
 
 
-/* ---------- Live Currency Converter KRW → AUD ---------- */
+/* ---------- Currency Converter KRW → AUD ---------- */
 
+// Approximate exchange rate
+// Update before travelling
+const krwToAudRate = 0.0011;
 
-const krwInput =
-document.getElementById("krwInput");
+const krwInput = document.getElementById("krwInput");
 
+krwInput.addEventListener("input", () => {
 
-let krwToAudRate = null;
+    const krwAmount = Number(krwInput.value);
 
+    const audAmount = krwAmount * krwToAudRate;
 
-
-async function getExchangeRate(){
-
-
-try {
-
-
-const response = await fetch(
-"https://v6.exchangerate-api.com/v6/Ye9afb37b49f0ba780bb7a271/latest/KRW"
-);
-
-
-const data =
-await response.json();
-
-
-krwToAudRate =
-data.conversion_rates.AUD;
-
-
-}
-
-
-catch(error){
-
-
-console.log(
-"Unable to load exchange rate",
-error
-);
-
-
-}
-
-
-}
-
-
-
-getExchangeRate();
-
-
-
-
-
-krwInput.addEventListener(
-"input",
-()=>{
-
-
-if(!krwToAudRate){
-
-document.getElementById("audOutput")
-.innerHTML =
-"Loading rate...";
-
-return;
-
-}
-
-
-
-const krwAmount =
-Number(krwInput.value);
-
-
-
-const audAmount =
-krwAmount * krwToAudRate;
-
-
-
-document.getElementById("audOutput")
-.innerHTML =
-
-"$" +
-audAmount.toFixed(2)
-+
-" AUD";
-
+    document.getElementById("audOutput").innerHTML =
+        "$" + audAmount.toFixed(2) + " AUD";
 
 });
 
