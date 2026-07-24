@@ -363,6 +363,9 @@ krwInput.addEventListener("input", () => {
 
     document.getElementById("audOutput").innerHTML =
         "$" + audAmount.toFixed(2) + " AUD";
+  
+   document.getElementById("exchangeRate").textContent =
+    `Approximate rate: ₩1,000 ≈ $${(1000 * krwToAudRate).toFixed(2)} AUD`;
 
 });
 
