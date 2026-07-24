@@ -67,9 +67,9 @@ date:"24 September",
 city:"Seoul",
 title:"Arrival in Seoul 🇰🇷",
 activities:[
-"Airport arrival",
+"Airport arrival: 8:00 PM",
+"Train/or Travel to accomodation details insert here",
 "Check into accommodation",
-"Explore nearby neighbourhood"
 ]
 },
 
@@ -77,22 +77,21 @@ activities:[
 {
 date:"25 September",
 city:"Seoul",
-title:"Seoul Exploration",
+title:"Hongdae Exploration",
 activities:[
-"Add activities here",
-"Add restaurant ideas here"
+"Hongedae (홍대) street art, cafés, shopping",
+"Myeondong (명동) shopping district",
+"North Seoul Tower (N서울타워) for sunset views"
 ]
 },
-
 
 {
 date:"26 September",
 city:"Seoul",
 title:"Culture & Food Day",
 activities:[
-"Add palace visits",
-"Museums",
-"Cafés"
+"Gyeongbokgung Palace (경복궁) - Guard Changing Ceremony at 10:00 AM or 2:00 PM",
+"The National Folk Museum of Korea (국립민속박물관) - located within Gyeongbokgung Palace",
 ]
 },
 
@@ -100,11 +99,13 @@ activities:[
 {
 date:"27 September",
 city:"Seoul",
-title:"Seoul Adventures",
+title:"KPOP Shopping & Nightlife",
 activities:[
-"Shopping",
-"Markets",
-"Local experiences"
+"K-Mecca (케이메카) in Myeongdong",
+"Myeondong Underground Shopping Center (명동지하쇼핑센터)",
+"WithMuu (위드무) in Hongdae",
+"Line Friends Square in Hongdae",
+"POCA SPOT in Hongdae for Photo Cards",
 ]
 },
 
@@ -114,8 +115,8 @@ date:"28 September",
 city:"Seoul",
 title:"Final Seoul Day",
 activities:[
-"Last shopping",
-"Favourite cafés"
+"Gwangjang Market (광장시장) for street food",
+"Jimjibang (찜질방) experience for relaxation",
 ]
 },
 
@@ -125,7 +126,8 @@ date:"29 September",
 city:"Jeju",
 title:"Travel to Jeju 🌊",
 activities:[
-"Fly to Jeju",
+"Fly to Jeju - add in flight details here",
+"Rental car options - insert details here",
 "Check in",
 "Explore island"
 ]
