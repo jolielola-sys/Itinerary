@@ -654,3 +654,65 @@ gap:25px;
     background:var(--sage);
 
 }
+/* ---------- Exchange Rate Card ---------- */
+
+.exchange-rate-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    margin: 0 auto 35px auto;
+
+    padding: 16px 28px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+}
+
+.rate-label {
+
+    font-size: 0.8rem;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: var(--sage);
+
+    font-weight: 600;
+
+}
+
+.rate-value {
+
+    font-size: 1.2rem;
+
+    font-weight: 600;
+
+    color: var(--brown);
+
+}
+.dark .exchange-rate-card {
+
+    background: #332d2b;
+
+}
+
+.dark .rate-value {
+
+    color: white;
+
+}
