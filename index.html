@@ -3,323 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A shared South Korea travel itinerary for September and October 2026.">
 
     <title>South Korea 2026 🇰🇷</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
 
-    <!-- Website styling -->
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 
 <body>
 
-<!-- Navigation -->
-<nav class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="logo" href="#home">🌸 Korea 2026</a>
 
-   <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#seoul">Seoul</a>
-    <a href="#jeju">Jeju</a>
-    <a href="#gyeongju">Gyeongju</a>
-    <a href="#jeonju">Jeonju</a>
-    <a href="#currency">Currency</a>
-</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#accommodation">Stay</a>
+            <a href="#weather">Weather</a>
+            <a href="#currency">Currency</a>
+            <a href="#itinerary">Travel</a>
+            <a href="#places">Places</a>
+        </div>
 
-    <button id="themeToggle">🌚 Dark Mode
-    </button>
-</nav>
+        <button id="themeToggle" type="button" aria-label="Switch to dark mode">
+            🌙 Dark Mode
+        </button>
+    </nav>
 
 
+    <!-- Hero -->
+    <header id="home" class="hero">
+        <div class="hero-overlay">
+            <h1>South Korea Adventure</h1>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
-
-    <div class="hero-overlay">
-
-        <h1>South Korea 2026</h1>
-
-        <p>
-            Seoul • Jeju • Gyeongju • Jeonju
-        </p>
-
-        <div class="countdown">
-            <h2>Countdown</h2>
-            <p id="countdownTimer">
-                Loading...
+            <p class="hero-dates">
+                24 September – 10 October 2026
             </p>
+
+            <p>
+                Seoul • Jeju • Gyeongju • Jeonju
+            </p>
+
+            <div class="countdown">
+                <h2>Countdown</h2>
+                <p id="countdownTimer" aria-live="polite">
+                    Loading...
+                </p>
+            </div>
         </div>
+    </header>
+
+
+    <main>
+
+        <!-- Accommodation -->
+        <section id="accommodation" class="section">
+            <h2>Accommodation 🏡</h2>
+
+            <div class="summary-grid">
+
+                <article class="card accommodation-card">
+                    <h3>🌸 Seoul</h3>
+                    <p>24 September – 29 September 2026</p>
+                    <p>Hongdae Serenity Stay</p>
+
+                    <a
+                        class="airbnb-button"
+                        href="https://www.booking.com/hotel/kr/mandarin-hong-dae.en-gb.html?aid=318615&amp;label=New_English_EN_AU_19670094265-SXf%2Ag6yHRoMj1hrAxMlYRAS813128680760%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg&amp;sid=66a34c62efba58e710187677f1400700&amp;dest_id=-716583&amp;dest_type=city&amp;dist=0&amp;group_adults=2&amp;group_children=0&amp;hapos=1&amp;hpos=1&amp;no_rooms=1&amp;req_adults=2&amp;req_children=0&amp;room1=A%2CA&amp;sb_price_type=total&amp;sr_order=popularity&amp;srepoch=1784805290&amp;srpvid=c90b4f0ff43e0901&amp;type=total&amp;ucfs=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open Accommodation →
+                    </a>
+                </article>
+
+                <article class="card accommodation-card">
+                    <h3>🌊 Jeju</h3>
+                    <p>29 September – 3 October 2026</p>
+                    <p>Guest suite in Hallim-eub, Jeju-si</p>
+
+                    <a
+                        class="airbnb-button"
+                        href="https://www.airbnb.com.au/rooms/46167214?source_impression_id=p3_1784804549_P3e_Ukmc0C-tlgyK"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open Accommodation →
+                    </a>
+                </article>
+
+                <article class="card accommodation-card">
+                    <h3>🏯 Gyeongju</h3>
+                    <p>3 October – 7 October 2026</p>
+                    <p>Home in Gyeongju-si</p>
+
+                    <a
+                        class="airbnb-button"
+                        href="https://www.airbnb.com.au/rooms/1204265944970597606?source_impression_id=p3_1784805179_P3znlH0s8xatBQ3x"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open Accommodation →
+                    </a>
+                </article>
+
+                <article class="card accommodation-card">
+                    <h3>🍂 Jeonju</h3>
+                    <p>7 October – 10 October 2026</p>
+                    <p>Home in Jungang-dong, Wansan-gu, Jeonju-si</p>
+
+                    <a
+                        class="airbnb-button"
+                        href="https://www.airbnb.com.au/rooms/41140373?source_impression_id=p3_1784805069_P3Z34-Uw8tr3WQZq"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open Accommodation →
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- Weather -->
+        <section id="weather" class="section">
+            <h2>Weather ☁️</h2>
+
+            <p class="section-subtitle">
+                Current temperature, air quality and humidity.
+            </p>
+
+            <div class="weather-grid">
+                <article class="card weather-card">
+                    <h3>🌸 Seoul</h3>
+                    <p id="seoulWeather" aria-live="polite">Loading...</p>
+                </article>
+
+                <article class="card weather-card">
+                    <h3>🌊 Jeju</h3>
+                    <p id="jejuWeather" aria-live="polite">Loading...</p>
+                </article>
+
+                <article class="card weather-card">
+                    <h3>🏯 Gyeongju</h3>
+                    <p id="gyeongjuWeather" aria-live="polite">Loading...</p>
+                </article>
+
+                <article class="card weather-card">
+                    <h3>🍂 Jeonju</h3>
+                    <p id="jeonjuWeather" aria-live="polite">Loading...</p>
+                </article>
+            </div>
+        </section>
 
-    </div>
 
-</section>
+        <!-- Currency -->
+        <section id="currency" class="section">
+            <h2>Currency Converter 💱</h2>
 
-</section>
+            <div class="exchange-rate-card">
+                <span class="rate-label">
+                    Approximate Exchange Rate
+                </span>
 
-   <!-- Accommodation -->
+                <span id="exchangeRate" class="rate-value">
+                    ₩1,000 ≈ $1.10 AUD
+                </span>
+            </div>
 
-<section id="accommodation" class="section">
+            <div class="currency-box">
+                <label class="visually-hidden" for="krwInput">
+                    Amount in Korean won
+                </label>
 
-<h2>Accommodation </h2>
+                <input
+                    type="number"
+                    id="krwInput"
+                    min="0"
+                    inputmode="numeric"
+                    placeholder="KRW"
+                >
 
+                <span aria-hidden="true">≈</span>
 
-<div class="summary-grid">
+                <output id="audOutput" for="krwInput">
+                    $0.00 AUD
+                </output>
+            </div>
+        </section>
 
 
-<div class="card accommodation-card">
+        <!-- Travel itinerary -->
+        <section id="itinerary" class="section">
+            <h2>Travel Itinerary ✈️</h2>
 
-<h3> Seoul</h3>
+            <p class="section-subtitle">
+                Key travel days and movements between locations.
+            </p>
 
-<p>
-24 September – 29 September 2026
-</p>
+            <div id="itineraryContainer">
+                <!-- Generated by script.js -->
+            </div>
+        </section>
 
-<p>
-Hongdae Serenity Stay
-</p>
 
+        <!-- Places Wishlist -->
+        <section id="places" class="section places-section">
+            <h2>Places Wishlist 📍</h2>
 
-<a 
-class="airbnb-button"
-href="https://www.booking.com/hotel/kr/mandarin-hong-dae.en-gb.html?aid=318615&label=New_English_EN_AU_19670094265-SXf%2Ag6yHRoMj1hrAxMlYRAS813128680760%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg&sid=66a34c62efba58e710187677f1400700&dest_id=-716583&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1784805290&srpvid=c90b4f0ff43e0901&type=total&ucfs=1&"
-target="_blank">
-View Airbnb →
-</a>
+            <p class="section-subtitle">
+                Our shortlist of activities, food and places to explore.
+            </p>
 
-</div>
+            <div id="placesContainer">
+                <!-- Reusable travel cards are generated by script.js -->
+            </div>
+        </section>
 
+    </main>
 
 
-<div class="card accommodation-card">
-
-<h3> Jeju</h3>
-
-<p>
-29 September – 3 October 2026
-</p>
-
-<p>
-Guest suite in Hallim-eub, Jeju-si. 
-</p>
-
-
-<a 
-class="airbnb-button"
-href="https://www.airbnb.com.au/rooms/46167214?source_impression_id=p3_1784804549_P3e_Ukmc0C-tlgyK"
-target="_blank">
-View Airbnb →
-</a>
-
-</div>
-
-
-
-<div class="card accommodation-card">
-
-<h3> Gyeongju</h3>
-
-<p>
-3 October – 7 October 2026
-</p>
-
-<p>
-Home in Gyeongju-si
-</p>
-
-
-<a 
-class="airbnb-button"
-href="https://www.airbnb.com.au/rooms/1204265944970597606?source_impression_id=p3_1784805179_P3znlH0s8xatBQ3x"
-target="_blank">
-View Airbnb →
-</a>
-
-</div>
-
-
-
-<div class="card accommodation-card">
-
-<h3> Jeonju</h3>
-
-<p>
-7 October – 10 October 2026
-</p>
-
-<p>
-Home in Jungang-dong, Wansan-gu, Jeonju-si
-</p>
-
-
-<a 
-class="airbnb-button"
-href="https://www.airbnb.com.au/rooms/41140373?source_impression_id=p3_1784805069_P3Z34-Uw8tr3WQZq"
-target="_blank">
-View Airbnb →
-</a>
-
-</div>
-
-
-</div>
-
-</section> 
-
-
-
-<!-- Weather -->
-<section id="weather" class="section">
-
-<h2>Weather ☁️</h2>
-
-<div class="weather-grid">
-
-    <div class="card weather-card">
-        <h3>Seoul</h3>
-        <p id="seoulWeather">Loading...</p>
-    </div>
-
-
-    <div class="card weather-card">
-        <h3>Jeju</h3>
-        <p id="jejuWeather">Loading...</p>
-    </div>
-
-
-    <div class="card weather-card">
-        <h3>Gyeongju</h3>
-        <p id="gyeongjuWeather">Loading...</p>
-    </div>
-
-
-    <div class="card weather-card">
-        <h3>Jeonju</h3>
-        <p id="jeonjuWeather">Loading...</p>
-    </div>
-
-</div>
-
-
-
-
-
-
-
-    
-<!-- Currency -->
-
-<section class="section" id="currency">
-
-    <h2>Currency Converter</h2>
-
- <div class="exchange-rate-card">
-
-    <span class="rate-label">
-        Approximate Exchange Rate
-    </span>
-
-    <span class="rate-value">
-        ₩1,000 ≈ $1.10 AUD
-    </span>
-
-</div>
-
-    <div class="currency-box">
-
-        <input
-            type="number"
-            id="krwInput"
-            placeholder="KRW"
-        >
-
-        <p>≈</p>
-
-        <div id="audOutput">
-            $0 AUD
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- Places -->
-<section id="places" class="section">
-
-<h2>Places Wishlist 📍</h2>
-
-<div class="card">
-
-<p>
-Places to visit will be added here.
-</p>
-
-<p>
-Each location will include:
-</p>
-
-<ul>
-<li>Google Maps link</li>
-<li>Naver Maps link</li>
-<li>Notes</li>
-</ul>
-
-</div>
-
-</section>
-
-
-
-<!-- Itinerary -->
-<section id="itinerary" class="section">
-
-<h2>Daily Itinerary 📅</h2>
-
-<div id="itineraryContainer">
-
-<!-- Generated automatically by JavaScript -->
-
-</div>
-
-</section>
-
-
-
-
-
-<!-- Food -->
-<section id="food" class="section">
-
-<h2>Food Wishlist 🍜</h2>
-
-<div class="card">
-
-<p>
-Restaurants and cafés to visit will be added here.
-</p>
-
-</div>
-
-</section>
-
-
-
-<footer>
-
-<p>
-Made for Korea 2026
-</p>
-
-</footer>
-
-
-
-<script src="script.js"></script>
+    <footer>
+        <p>Made for Korea 2026 🌸</p>
+    </footer>
 
 </body>
 </html>
