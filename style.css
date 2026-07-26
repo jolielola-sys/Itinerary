@@ -359,41 +359,45 @@ h2 {
 
 
 
-/* ---------- Itinerary ---------- */
+/* ---------- Travel Itinerary ---------- */
 
+.travel-card {
 
-.itinerary-card {
+    max-width: 650px;
 
-    margin-bottom:20px;
+    margin: 0 auto 25px auto;
 
-}
-
-
-.itinerary-header {
-
-    cursor:pointer;
-
-    display:flex;
-
-    justify-content:space-between;
+    text-align: left;
 
 }
 
+.travel-header {
 
+    display: inline-block;
 
-.itinerary-content {
+    background: var(--sage);
 
-    display:none;
+    color: white;
 
-    margin-top:15px;
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    margin-bottom: 15px;
 
 }
 
+.travel-card h4 {
 
+    margin-bottom: 10px;
 
-.itinerary-content.active {
+}
 
-    display:block;
+.travel-card p {
+
+    opacity: 0.85;
+
+    line-height: 1.6;
 
 }
 
@@ -714,5 +718,20 @@ gap:25px;
 .dark .rate-value {
 
     color: white;
+
+}
+.section-subtitle {
+
+    text-align: center;
+
+    margin-top: -15px;
+
+    margin-bottom: 35px;
+
+    color: var(--brown);
+
+    opacity: 0.75;
+
+    font-size: 0.95rem;
 
 }
