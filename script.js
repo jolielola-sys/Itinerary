@@ -990,31 +990,31 @@ const places = [
         city: "Seoul",
         cityIcon: "🌸",
 
-        category: "Museum",
-        categoryClass: "museum",
+        category: "Food",
+        categoryClass: "food",
 
-        title: "Leeum Museum of Art",
+        title: "Korean BBQ in Mapo-Gu (강남 돼지상회 무한리필 홍대점)",
 
         image:
-            "images/seoul/leeum-museum.jpg",
+            "Images/SEOUL/SEOUL-korean-bbq.jpg",
 
         duration:
             "2 hours",
 
         cost:
-            "Check current ticket price",
+            "₩10,000–20,000 per person",
 
         location:
-            "Hannam-dong",
+            "Mapo-Gu, Seoul",
 
         description:
-            "A museum combining traditional Korean art with modern and contemporary exhibitions in a distinctive architectural setting.",
+            "Highly rated Korean BBQ restaurant in Mapo-Gu, known for its quality meats and authentic experience.",
 
         googleMaps:
-            "https://www.google.com/maps/search/?api=1&query=Leeum+Museum+of+Art",
+            "https://www.google.com/maps/place/%EA%B0%95%EB%82%A8+%EB%8F%BC%EC%A7%80%EC%83%81%ED%9A%8C+%EB%AC%B4%ED%95%9C%EB%A6%AC%ED%95%84+%ED%99%8D%EB%8C%80%EC%A0%90/@37.5535385,126.921178,16z/data=!3m1!4b1!4m6!3m5!1s0x357c98db3820e667:0xf1a6aff3a5330fdb!8m2!3d37.5535385!4d126.921178!16s%2Fg%2F11h6d58syl?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
 
         naverMaps:
-            "https://map.naver.com/p/search/Leeum%20Museum%20of%20Art"
+            "https://map.naver.com/p/search/Korean%20BBQ%20in%20Mapo-Gu"
     },
 
 
@@ -1025,10 +1025,10 @@ const places = [
         category: "Shopping",
         categoryClass: "shopping",
 
-        title: "Seongsu-dong",
+        title: "Gwangjang Market",
 
         image:
-            "images/seoul/seongsu.jpg",
+            "Images/SEOUL/SEOUL-gwangjang-market.jpg",
 
         duration:
             "Half day",
@@ -1037,16 +1037,16 @@ const places = [
             "Free to explore",
 
         location:
-            "Seongsu Station",
+            "Jongno-gu, Seoul",
 
         description:
-            "A former industrial neighbourhood filled with design shops, pop-ups, cafés and converted warehouse spaces.",
+            "A bustling traditional market known for its street food, snacks, and local specialties.",
 
         googleMaps:
-            "https://www.google.com/maps/search/?api=1&query=Seongsu-dong+Seoul",
+            "https://www.google.com/maps/search/?api=1&query=Gwangjang+Market",
 
         naverMaps:
-            "https://map.naver.com/p/search/Seongsu-dong"
+            "https://map.naver.com/p/search/Gwangjang%20Market"
     },
 
 
