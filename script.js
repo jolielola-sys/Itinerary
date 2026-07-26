@@ -964,7 +964,7 @@ const places = [
         title: "Cafe Onion Anguk",
 
         image:
-            "images/seoul/cafe-onion.jpg",
+            "images/SEOUL/cafe-onion.jpg",
 
         duration:
             "45–60 minutes",
