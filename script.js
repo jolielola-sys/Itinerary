@@ -996,7 +996,7 @@ const places = [
         title: "Korean BBQ in Mapo-Gu (강남 돼지상회 무한리필 홍대점)",
 
         image:
-            "Images/SEOUL/SEOUL-korean-bbq.jpg",
+            "Images/SEOUL/korean-BBQ.jpg",
 
         duration:
             "2 hours",
@@ -1028,7 +1028,7 @@ const places = [
         title: "Gwangjang Market",
 
         image:
-            "Images/SEOUL/SEOUL-gwangjang-market.jpg",
+            "Images/SEOUL/gwangjang-market.jpg",
 
         duration:
             "Half day",
