@@ -58,203 +58,39 @@ updateCountdown();
 
 /* ---------- Itinerary Data ---------- */
 
-
 const itinerary = [
 
-
 {
-date:"24 September",
-city:"Seoul",
-title:"Arrival in Seoul 🇰🇷",
-activities:[
-"Airport arrival: 8:00 PM",
-"Train/or Travel to accomodation details insert here",
-"Check into accommodation",
-]
-},
-
-
-{
-date:"25 September",
-city:"Seoul",
-title:"Hongdae Exploration",
-activities:[
-"Hongedae (홍대) street art, cafés, shopping",
-"Myeondong (명동) shopping district",
-"North Seoul Tower (N서울타워) for sunset views"
-]
+    date: "24 September",
+    title: "✈️ Brisbane → Seoul",
+    description: "Flight to Seoul and check in to accommodation."
 },
 
 {
-date:"26 September",
-city:"Seoul",
-title:"Culture & Food Day",
-activities:[
-"Gyeongbokgung Palace (경복궁) - Guard Changing Ceremony at 10:00 AM or 2:00 PM",
-"The National Folk Museum of Korea (국립민속박물관) - located within Gyeongbokgung Palace",
-]
+    date: "29 September",
+    title: "✈️ Seoul → Jeju",
+    description: "Morning flight to Jeju. Check in to Airbnb."
 },
 
-
 {
-date:"27 September",
-city:"Seoul",
-title:"KPOP Shopping & Nightlife",
-activities:[
-"K-Mecca (케이메카) in Myeongdong",
-"Myeondong Underground Shopping Center (명동지하쇼핑센터)",
-"WithMuu (위드무) in Hongdae",
-"Line Friends Square in Hongdae",
-"POCA SPOT in Hongdae for Photo Cards",
-]
+    date: "3 October",
+    title: "🚄 Jeju → Gyeongju",
+    description: "Travel to Gyeongju and check in."
 },
 
-
 {
-date:"28 September",
-city:"Seoul",
-title:"Final Seoul Day",
-activities:[
-"Gwangjang Market (광장시장) for street food",
-"Jimjibang (찜질방) experience for relaxation",
-]
+    date: "7 October",
+    title: "🚄 Gyeongju → Jeonju",
+    description: "Travel to Jeonju and check in."
 },
 
-
 {
-date:"29 September",
-city:"Jeju",
-title:"Travel to Jeju 🌊",
-activities:[
-"Fly to Jeju - add in flight details here",
-"Rental car options - insert details here",
-"Check in",
-"Explore island"
-]
-},
-
-
-{
-date:"30 September",
-city:"Jeju",
-title:"Jeju Island",
-activities:[
-"Nature",
-"Beaches",
-"Food"
-]
-},
-
-
-{
-date:"1 October",
-city:"Jeju",
-title:"Jeju Island",
-activities:[
-"Add activities here"
-]
-},
-
-
-{
-date:"2 October",
-city:"Jeju",
-title:"Final Jeju Day",
-activities:[
-"Relax",
-"Explore"
-]
-},
-
-
-{
-date:"3 October",
-city:"Gyeongju",
-title:"Historic Gyeongju 🏯",
-activities:[
-"Travel to Gyeongju",
-"Explore historic sites"
-]
-},
-
-
-{
-date:"4 October",
-city:"Gyeongju",
-title:"Ancient Korea",
-activities:[
-"Bulguksa Temple",
-"Historic areas"
-]
-},
-
-
-{
-date:"5 October",
-city:"Gyeongju",
-title:"Gyeongju Exploration",
-activities:[
-"Add activities here"
-]
-},
-
-
-{
-date:"6 October",
-city:"Gyeongju",
-title:"Final Gyeongju Day",
-activities:[
-"Add activities here"
-]
-},
-
-
-{
-date:"7 October",
-city:"Jeonju",
-title:"Jeonju Hanok Village 🍂",
-activities:[
-"Travel to Jeonju",
-"Explore Hanok Village"
-]
-},
-
-
-{
-date:"8 October",
-city:"Jeonju",
-title:"Jeonju Food Day",
-activities:[
-"Bibimbap",
-"Markets",
-"Cafés"
-]
-},
-
-
-{
-date:"9 October",
-city:"Jeonju",
-title:"Final Day",
-activities:[
-"Final sightseeing",
-"Prepare for departure"
-]
-},
-
-
-{
-date:"10 October",
-city:"Jeonju",
-title:"Departure ✈️",
-activities:[
-"Travel home"
-]
+    date: "10 October",
+    title: "✈️ Jeonju → Brisbane",
+    description: "Travel home."
 }
 
-
 ];
-
 
 
 
@@ -265,81 +101,27 @@ activities:[
 const itineraryContainer =
 document.getElementById("itineraryContainer");
 
+itinerary.forEach(stop => {
 
-itinerary.forEach(day => {
+    const card = document.createElement("div");
 
+    card.className = "card travel-card";
 
-const card =
-document.createElement("div");
+    card.innerHTML = `
 
+        <div class="travel-header">
 
-card.className =
-"card itinerary-card";
+            <h3>${stop.date}</h3>
 
+        </div>
 
+        <h4>${stop.title}</h4>
 
-card.innerHTML = `
+        <p>${stop.description}</p>
 
-<div class="itinerary-header">
+    `;
 
-<h3>
-${day.date} - ${day.city}
-</h3>
-
-<span>▼</span>
-
-</div>
-
-
-<div class="itinerary-content">
-
-<h4>${day.title}</h4>
-
-
-<ul>
-
-${day.activities
-.map(item=>`<li>${item}</li>`)
-.join("")}
-
-</ul>
-
-
-<a 
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/${encodeURIComponent(day.city)}"
->
-📍 Google Maps
-</a>
-
-
-<a 
-class="map-button"
-target="_blank"
-href="https://map.naver.com/v5/search/${encodeURIComponent(day.city)}"
->
-📍 Naver Maps
-</a>
-
-
-</div>
-
-`;
-
-
-
-card.querySelector(".itinerary-header")
-.addEventListener("click",()=>{
-
-card.querySelector(".itinerary-content")
-.classList.toggle("active");
-
-});
-
-
-itineraryContainer.appendChild(card);
-
+    itineraryContainer.appendChild(card);
 
 });
 
