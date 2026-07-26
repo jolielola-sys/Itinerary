@@ -684,7 +684,7 @@ const travelItinerary = [
         date: "3 October",
         isoDate: "2026-10-03",
 
-        icon: "🚆",
+        icon: "✈️",
 
         title: "Jeju → Gyeongju",
 
@@ -932,7 +932,7 @@ const places = [
         title: "Gyeongbokgung Palace",
 
         image:
-            "images/seoul/gyeongbokgung.jpg",
+            "Images/SEOUL/SEOUL-gyeongbokgung-palace.jpg",
 
         duration:
             "2–3 hours",
