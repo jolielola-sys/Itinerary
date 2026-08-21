@@ -665,7 +665,7 @@ const travelItinerary = [
         title: "Brisbane → Seoul",
 
         description:
-            "Fly to Seoul and check in to our first accommodation."
+            "Depart Brisbane 11:10 - Arrive in Seoul 20:00."
     },
 
     {
@@ -677,7 +677,7 @@ const travelItinerary = [
         title: "Seoul → Jeju",
 
         description:
-            "Fly to Jeju Island and check in to our accommodation."
+            "Depart Seoul 13:45 - Arrive Jeju 15:05."
     },
 
     {
@@ -686,10 +686,10 @@ const travelItinerary = [
 
         icon: "✈️",
 
-        title: "Jeju → Gyeongju",
+        title: "Jeju → Busan → Gyeongju",
 
         description:
-            "Travel from Jeju to Gyeongju and check in."
+            "Depart Jeju 13:00 - Arrive Busan 14:05. Travel from Busan to Gyeongju."
     },
 
     {
@@ -703,7 +703,17 @@ const travelItinerary = [
         description:
             "Travel from Gyeongju to Jeonju and check in."
     },
+ {
+        date: "10 October",
+        isoDate: "2026-10-10",
 
+        icon: "🚆",
+
+        title: "Gyeongju → Seoul",
+
+        description:
+            "Travel from Gyeongju to Seoul."
+    },
     {
         date: "10 October",
         isoDate: "2026-10-10",
@@ -713,7 +723,7 @@ const travelItinerary = [
         title: "Return Home",
 
         description:
-            "Begin the journey home to Brisbane."
+            "Depart Seoul 21:30 - Return home to Brisbane."
     }
 
 ];
