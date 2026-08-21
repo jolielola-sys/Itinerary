@@ -1071,28 +1071,28 @@ const places = [
         category: "Nature",
         categoryClass: "nature",
 
-        title: "Seongsan Ilchulbong",
+        title: "Spirited Garden",
 
         image:
-            "images/jeju/seongsan-ilchulbong.jpg",
+            "images/jeju/spirited-garden.jpg",
 
         duration:
             "1–2 hours",
 
         cost:
-            "₩5,000",
+            "₩15,000",
 
         location:
             "Eastern Jeju",
 
         description:
-            "A volcanic tuff cone with a short summit walk and broad views across the coast.",
+            "A beautiful garden with a variety of plants and scenic views.",
 
         googleMaps:
-            "https://www.google.com/maps/search/?api=1&query=Seongsan+Ilchulbong",
+            "https://maps.app.goo.gl/vziABdP1cWVPx7vw7",
 
         naverMaps:
-            "https://map.naver.com/p/search/Seongsan%20Ilchulbong"
+            "https://naver.me/FLyTUSed"
     },
 
 
