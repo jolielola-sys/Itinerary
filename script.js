@@ -1074,7 +1074,7 @@ const places = [
         title: "Spirited Garden",
 
         image:
-            "images/jeju/spirited-garden.jpg",
+            "Images/jeju/spirited-garden.jpg",
 
         duration:
             "1–2 hours",
@@ -1106,7 +1106,7 @@ const places = [
         title: "Hallasan National Park",
 
         image:
-            "images/jeju/hallasan.jpg",
+            "Images/jeju/hallasan.jpg",
 
         duration:
             "Half day or full day",
