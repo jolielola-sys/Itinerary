@@ -704,15 +704,15 @@ const travelItinerary = [
             "Travel from Gyeongju to Jeonju and check in."
     },
  {
-        date: "10 October",
+        date: "9 October",
         isoDate: "2026-10-10",
 
         icon: "🚆",
 
-        title: "Gyeongju → Seoul",
+        title: "Jeonju → Seoul",
 
         description:
-            "Travel from Gyeongju to Seoul."
+            "Travel from Jeonju back to Seoul."
     },
     {
         date: "10 October",
