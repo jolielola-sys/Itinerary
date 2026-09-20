@@ -1531,7 +1531,7 @@ body.dark {
 @media (max-width: 700px) {
 
     .map-card-image {
-        height: 130px;
+        height: 200px;
     }
 
 }
@@ -1843,4 +1843,67 @@ body.dark {
 
     }
 
+}/* Map link container */
+
+.map-card .map-card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+
+/* Both map buttons */
+
+.map-card .map-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 1 auto;
+
+    padding: 8px 14px;
+
+    border: 1px solid var(--border-colour);
+    border-radius: 999px;
+
+    background: transparent;
+    color: var(--brown);
+
+    text-decoration: none;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Google */
+
+.map-card .google-map-link {
+    background: transparent;
+    border-color: var(--pink);
+    color: var(--brown);
+}
+
+
+/* Naver */
+
+.map-card .naver-map-link {
+    background: transparent;
+    border-color: var(--sage);
+    color: var(--brown);
+}
+
+
+/* Hover */
+
+.map-card .map-link:hover {
+    background: rgba(156, 175, 136, 0.15);
+    border-color: var(--sage);
+    transform: translateY(-2px);
 }
