@@ -1429,7 +1429,7 @@ body.dark {
 .map-card-image {
     display: block;
     width: 100%;
-    height: 200px;
+    height: 500px;
     object-fit: cover;
     object-position: center;
 }
@@ -1531,7 +1531,7 @@ body.dark {
 @media (max-width: 700px) {
 
     .map-card-image {
-        height: 200px;
+        height: 500px;
     }
 
 }
